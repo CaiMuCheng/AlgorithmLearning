@@ -6,9 +6,10 @@ import arrays.DeleteSolution
 import arrays.FindSolution
 import arrays.SetSolution
 import arrays.SumSolution
+import kotlin.math.exp
 
 fun main() {
-    reverseStringTest()
+    strToIntTest()
 }
 
 // 测试两数之和
@@ -73,5 +74,21 @@ private fun reverseDigitTest() {
     val num = 132
     val expectNum = 231
     assert(SetSolution.reverse(num) == expectNum)
+    println("Successfully!")
+}
+
+private fun replaceSpaceTest() {
+    val str = "We are happy."
+    val expectStr = "We%20are%20happy."
+    assert(SetSolution.replaceSpace(str) == expectStr)
+    println("Successfully!")
+}
+
+private fun strToIntTest() {
+    val str = "    311455 oabcd"
+    val expectNum = 311455
+    val k = SetSolution.strToInt(str)
+    println(k)
+    assert(k == expectNum)
     println("Successfully!")
 }
